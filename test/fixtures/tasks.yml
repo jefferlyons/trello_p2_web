@@ -4,18 +4,16 @@ one:
   title: MyString
   description: MyText
   duration: MyString
-  startime: 2015-11-08 16:10:32
-  endtime: 2015-11-08 16:10:32
-  check: MyString
-  boolean: MyString
+  startime: 2015-11-08 17:09:06
+  endtime: 2015-11-08 17:09:06
+  check: false
   user_id: 1
 
 two:
   title: MyString
   description: MyText
   duration: MyString
-  startime: 2015-11-08 16:10:32
-  endtime: 2015-11-08 16:10:32
-  check: MyString
-  boolean: MyString
+  startime: 2015-11-08 17:09:06
+  endtime: 2015-11-08 17:09:06
+  check: false
   user_id: 1

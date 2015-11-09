@@ -15,3 +15,32 @@
  *= require foundation_and_overrides
 
  */
+@import 'foundation/functions';
+@import 'foundation';
+
+table {
+    border: none;
+}
+
+h1 {
+    color:#0066CC;
+    font-weight: bold;
+}
+
+
+
+.Cflase {
+    background-color: #FFE6CC;
+   
+}
+
+.Cflase thead {
+     background-color: #FFE6CC;
+}
+
+.Ctrue  {
+    background-color: #669966;
+}
+.Ctrue thead {
+     background-color: #669966;
+}

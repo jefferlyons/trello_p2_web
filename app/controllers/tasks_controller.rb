@@ -1,11 +1,17 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   # GET /tasks
   # GET /tasks.json
   def index
     @tasks = Task.all
+    @users = User.all
+    
   end
+
+
+
 
   # GET /tasks/1
   # GET /tasks/1.json
@@ -15,6 +21,7 @@ class TasksController < ApplicationController
   # GET /tasks/new
   def new
     @task = Task.new
+    @users = User.all.map{|user| user.id}
   end
 
   # GET /tasks/1/edit

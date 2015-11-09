@@ -7,7 +7,7 @@ class CreateTasks < ActiveRecord::Migration
       t.timestamp :startime
       t.timestamp :endtime
       t.boolean :check
-      t.integer :user_id
+      t.integer :user_id ,  null: false
 
       t.timestamps null: false
     end

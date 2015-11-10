@@ -7,6 +7,9 @@ class TasksController < ApplicationController
   def index
     @tasks = Task.all
     @users = User.all
+    @tasks_check_false = Task.where(check: false).order( 'tasks.endtime DESC' )
+    @tasks_check_true = Task.where(check: true).order( 'tasks.endtime DESC' )
+    
     
   end
 

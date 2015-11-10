@@ -29,18 +29,20 @@ h1 {
 
 
 
-.Cflase {
-    background-color: #FFE6CC;
+.Table_completed {
+    background-color: #B39EB5;
    
 }
 
-.Cflase thead {
-     background-color: #FFE6CC;
+
+.Table_in  {
+    background-color: #77DD77;
+    
 }
 
-.Ctrue  {
-    background-color: #669966;
-}
-.Ctrue thead {
-     background-color: #669966;
+
+
+
+.espirado {
+    background-color: gray;
 }

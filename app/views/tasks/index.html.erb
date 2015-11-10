@@ -8,7 +8,7 @@
             <table class="Table_in">
               <thead>
                 <th>Title</th> 
-                <th>Description</th>
+               
                 <th>Duration</th>
                 <th>Endtime</th>
                 <th>User</th>
@@ -19,7 +19,7 @@
                <% if task.endtime > DateTime.now.to_date %>
               <tr>
               <td><%= task.title %></th>
-              <td><%= task.description %></th>
+              
               <td><%= task.duration %></th>
               <td><%= task.endtime %></th>
               <td><%= @users.where(["id = ?",task.user_id]).first.email %></th>
@@ -42,7 +42,7 @@
           <table class="Table_completed">
             <thead>
                 <th>Title</th> 
-                <th>Description</th>
+               
                 <th>Duration</th>
                 <th>Endtime</th>
                 <th>User</th>
@@ -52,7 +52,7 @@
                <% @tasks_check_true.each  do |task| %>
                <tr>
               <td><%= task.title %></th>
-              <td><%= task.description %></th>
+              
               <td><%= task.duration %></th>
               <% if task.endtime > DateTime.now.to_date %>
               <td>Expirado</th>
@@ -82,17 +82,18 @@
                 <th>Duration</th>
                 <th>Endtime</th>
                 <th>User</th>
-                <th colspan="3"></th>
+                <th></th>
               </thead>
             <tbody>
                <% @tasks_check_false.each  do |task| %>
                <% if task.endtime < DateTime.now.to_date %>
               <tr>
               <td><%= task.title %></th>
-              <td><%= task.description %></th>
+              
               <td><%= task.duration %></th>
               <td><%= task.endtime %></th>
               <td><%= @users.where(["id = ?",task.user_id]).first.email %></th>
+              <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
            
                </tr>
                <%end%>
